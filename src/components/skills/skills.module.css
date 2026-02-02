@@ -1,0 +1,153 @@
+/* Technologies Section */
+.technologies {
+  padding: 6rem 11rem;
+  position: relative;
+}
+
+.techTitle {
+  text-align: center;
+  font-size: 4rem;
+  color: #f9fafb;
+  margin-bottom: 2rem;
+}
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 3rem auto;
+}
+
+.techCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  backdrop-filter: blur(10px);
+
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+.techCard:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.4),
+    0 0 35px rgba(167, 139, 250, 0.35);
+  border-color: rgba(167, 139, 250, 0.4);
+}
+
+.techIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+
+  animation: float 4s ease-in-out infinite;
+}
+
+.techCard:nth-child(2) .techIcon {
+  animation-delay: 0.4s;
+}
+.techCard:nth-child(3) .techIcon {
+  animation-delay: 0.8s;
+}
+.techCard:nth-child(4) .techIcon {
+  animation-delay: 1.2s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(6deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+.techName {
+  font-size: 1.1rem;
+  color: #f9fafb;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.techDesc {
+  font-size: 0.9rem;
+  color: #a1a1aa;
+  line-height: 1.5;
+}
+
+.techBar {
+  width: 65%;
+  height: 4px;
+  margin: 1.2rem auto 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #4315cdc9, #a78bfa, #4315cdc9);
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .technologies {
+    padding: 4rem 2rem;
+  }
+
+  .techTitle {
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .techGrid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin: 2.5rem auto;
+  }
+
+  .techCard {
+    padding: 1.6rem 1.2rem;
+  }
+
+  .techCard:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow:
+      0 18px 30px rgba(0, 0, 0, 0.45),
+      0 0 22px rgba(167, 139, 250, 0.35);
+  }
+
+  .techIcon {
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .techName {
+    font-size: 1rem;
+  }
+
+  .techDesc {
+    font-size: 0.85rem;
+  }
+
+  .techBar {
+    width: 70%;
+    height: 3px;
+    margin-top: 1rem;
+  }
+
+}

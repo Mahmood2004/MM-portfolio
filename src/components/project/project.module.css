@@ -1,0 +1,128 @@
+/* Projects */
+.projects {
+  padding: 1rem 11rem;
+}
+
+.projectTitle {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.projectTitle h1 {
+  color: #f9fafb;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+/* Projects Section */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.projectCard {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+  border-color: rgba(167, 139, 250, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.projectImage {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.projectImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.projectCard:hover .projectImage img {
+  transform: scale(1.05);
+}
+
+.projectContent {
+  padding: 2rem;
+}
+
+.projectContent h3 {
+  font-size: 1.5rem;
+  color: #f9fafb;
+  margin-bottom: 1rem;
+}
+
+.projectContent p {
+  color: #a1a1aa;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.projectTechnologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.techTag {
+  background: rgba(167, 139, 250, 0.1);
+  color: #a78bfa;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 3rem 2rem;
+  }
+
+  .projectTitle {
+    margin-bottom: 3rem;
+  }
+
+  .projectTitle h1 {
+    font-size: 2.8rem;
+  }
+
+  /* PROJECT GRID */
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .projectImage {
+    height: 200px;
+  }
+
+  .projectContent {
+    padding: 1.5rem;
+  }
+
+  .projectContent h3 {
+    font-size: 1.3rem;
+  }
+
+  .projectContent p {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .techTag {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.9rem;
+  }
+
+}

@@ -1,0 +1,169 @@
+/* Navbar */
+.navbar {
+  padding: 3rem 7rem;
+  background-color: #080b15;
+  display: flex;
+  justify-content: flex-end;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.navbarName {
+  margin-right: auto;
+  color: #a78bfa;
+  font-family: "Great Vibes", cursive;
+  font-size: 1.8rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.navbarItems {
+  display: flex;
+  gap: 50px;
+}
+
+.navbarItems li {
+  list-style: none;
+  overflow: hidden;
+  height: 25px;
+}
+
+.navbarItems li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.navbarItems li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #a78bfa;
+  transition: width 0.3s ease;
+}
+
+.navbarItems li a:hover {
+  color: #a78bfa;
+}
+
+.navbarItems li a:hover::after {
+  background-color: #a78bfa;
+  width: 100%;
+}
+
+.navbarItems li a.active {
+  color: #a78bfa;
+}
+
+.navbarItems li a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #a78bfa;
+  transition: width 0.3s ease;
+}
+
+.codeToggle {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #a78bfa;
+  user-select: none;
+}
+
+.codeToggle span {
+  display: inline-block;
+  transition: all 0.35s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1.5rem 2rem;
+  }
+
+  /* menu icon */
+  .codeToggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* CLOSED STATE </> */
+  .codeToggle .angle.left {
+    transform: translateX(0);
+  }
+
+  .codeToggle .angle.right {
+    transform: translateX(0);
+  }
+
+  .codeToggle .slash {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* OPEN STATE <> */
+  .codeToggle.open .slash {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  .codeToggle.open .angle.left {
+    transform: translateX(6px);
+  }
+
+  .codeToggle.open .angle.right {
+    transform: translateX(-6px);
+  }
+
+  /* NAV ITEMS */
+  .navbarItems {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #080b15;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .navbarItems.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navbarItems li {
+    height: auto;
+  }
+
+  .navbarItems li a {
+    font-size: 1.2rem;
+  }
+
+  .navbarItems li a.active {
+    color: #a78bfa;
+  }
+}

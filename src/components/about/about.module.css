@@ -1,0 +1,116 @@
+/* About */
+.about {
+  padding: 5rem 11rem;
+}
+
+.aboutTitle {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.aboutTitle h1 {
+  color: #f9fafb;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.underline {
+  width: 125px;
+  height: 4px;
+  background: linear-gradient(90deg, #4315cdc9, #a78bfa);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.aboutText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #a1a1aa;
+}
+
+.introText {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #f9fafb;
+}
+
+.experienceHighlights {
+  display: flex;
+  gap: 2rem;
+  padding-top: 3rem;
+}
+
+.highlightCard {
+  background: rgba(167, 139, 250, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.highlightCard:hover {
+  transform: translateY(-5px);
+  border-color: #a78bfa;
+}
+
+.highlightCard h3 {
+  font-size: 2rem;
+  color: #a78bfa;
+  margin-bottom: 0.5rem;
+}
+
+.highlightCard p {
+  font-size: 0.9rem;
+  color: #a1a1aa;
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 2rem;
+  }
+
+  .aboutTitle {
+    margin-bottom: 3rem;
+  }
+
+  .aboutTitle h1 {
+    font-size: 2.8rem;
+  }
+
+  .underline {
+    width: 90px;
+    height: 3px;
+  }
+
+  .aboutText {
+    font-size: 1rem;
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  .introText {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .experienceHighlights {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 2.5rem;
+  }
+
+  .highlightCard {
+    padding: 1.3rem;
+  }
+
+  .highlightCard h3 {
+    font-size: 1.7rem;
+  }
+
+  .highlightCard p {
+    font-size: 0.95rem;
+  }
+}
